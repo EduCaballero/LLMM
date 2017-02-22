@@ -1,0 +1,11 @@
+#logoWeb{
+    height: 300px;
+    width: 100%;
+}
+h1 {
+    color: #99ff00; /* esto es para el color del texto */
+    background-color: #6666ff; /* esto es para el color del fondo*/
+    border-width: 2px; /* esto es para la anchura */
+    border-color: #990099;
+    border-style: solid;
+   }

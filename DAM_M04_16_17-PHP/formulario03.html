@@ -1,0 +1,50 @@
+
+<html>
+<head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Bienvenidos a Aperture Labs" />
+        <title>Aperture LABS</title>            
+        <link href="form02.css" rel="stylesheet" type="text/css"/>
+        </head>
+    
+    <body>
+        <header>
+             <img src="aperture_lab.jpg"
+                 alt="aperture laboratories"
+                 title="Aperture Labs logo"
+                 height="200"
+                 width="400"/>             
+             <h1 id="h1">ALTA DE TU PERFIL</h1>             
+        </header>
+        
+        <form action="registro02.php" method="get">
+            NOMBRE:<input name="name" type="text" placeholder="Nombre"  required/>
+            NACIMIENTO<input name="birth" type="text" placeholder="Fecha de nacimiento" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])/(0[1-9]|1[012])/[0-9]{4}" required/> <br />
+            
+            USUARIO:<input name="user" type="text" placeholder="inputNombre" pattern="[A-Za-z]{3-10}" required/>
+            BLOG:<input name="url" type="url" placeholder="url de tu blog" required/>         
+            MARCA DE MOVIL:
+            <select name="mobilebrand" required>
+                <option value="Motorola">Motorola</option>
+                <option value="Apple">Apple</option>
+                <option value="Samsung">Samsung</option>                
+            </select><br />
+            
+            Número de hermanos:<input name="bros" type="number" min="0" max="20" required/><br />
+            Sexo<br />
+            Hombre: <input type="radio" name="sex" value="Hombre" required/>
+            Mujer: <input type="radio" name="sex" value="Mujer" required/><br />
+            
+            Comida favorita:<br />
+            Chocolate:<input type="checkbox" name="comida" value="chocolate">
+            Shushi:<input type="checkbox" name="comida" value="shushi">
+            Pan:<input type="checkbox" name="comida" value="pan">
+            Jamón:<input type="checkbox" name="comida" value="jamón">
+
+            <input type="submit" value="regístrate" /> 
+            <input type="reset" value="limpia el formulario">
+
+        </form>
+        
+    </body>
+</html>

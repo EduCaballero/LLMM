@@ -1,0 +1,60 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+section{
+    width: 100%;
+    height: 100%;
+}
+
+div{
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+
+section>div:first-child{
+    width: 70%;
+    height: 550px;
+    background-color: gainsboro;
+}
+
+section>div:first-child>div:first-child{
+    width: 100%;
+    height: 25%;
+    background-color: #669900;
+}
+
+section>div:first-child>div:nth-child(2){
+   width: 100%;
+   text-align: center;
+}
+
+section>div:first-child>div:nth-child(2)>div:first-child{
+    width: 55%;
+    height: 25%;
+    background-color: pink;
+    display: inline-block;
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+
+section>div:first-child>div:nth-child(2)>div:nth-child(2){
+    width: 55%;
+    height: 25%;
+    background-color: pink;
+    display: inline-block;
+    margin-top: 2%;
+}
+
+section>div:nth-child(2){
+    background-color: pink;
+    height: 551px;
+    width: 30%;
+}

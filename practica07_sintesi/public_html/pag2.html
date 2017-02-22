@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>PRÁCTICA SÍNTESIS UF1 LLMM</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="index.css" rel="stylesheet" type="text/css"/>
+        <link href="pag2.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header>
+            <div id="b1"><div id="l1"><a href="index.html">Link pag1</a></div>
+                <div id="l2"><a href="pag2.html">Link pag2</a></div></div>
+            <div id="limgcab"><img src="img/segadoes.jpg" width="300" height="190"/></div>
+            <div id="b2"><div id="l3"><a>Link pag3</a></div>
+                <div id="l4"><a>Link pag4</a></div></div>
+        </header>
+        <section id="section2">
+            <div><div><h2 id="tit2">REGISTRO</h2></div>
+                <form action="reg.php" method="post">
+                    <div id="bloque1"><label>Nombre</label><div><input class="empujar1" name="nom" type="text" placeholder="  Introduce tu nombre" pattern="[A-Za-z]{3-22}" required/></div>
+                        <label>Apellidos</label><div><input name="ape" type="text" placeholder="  Introduce tus apellidos" pattern="[A-Za-z]{3-22}" required/></div></div><br>
+                    <div id="bloque2"><label>Fecha nacimiento</label><div><input class="empujar1" type="date" name="fecha" step="1" min="1900-01-01" max="2010-01-01" placeholder="1910-01-01" required></div>
+                        <label>E-mail</label><div><input name="email" type="email" placeholder="  Introduce tu email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required/></div></div><br>
+                    <div id="bloque3"><label>Sexo</label><br />
+                        <div>Masculino<input type="radio" name="regsex" value="hombre" required></div>
+                        <div>Femenino<input type="radio" name="regsex" value="mujer" required></div>
+                        <div>Otro<input type="radio" name="regsex" value="otro" required></div></div>
+                        <div id="bloque4"><label class="block">¿Cómo nos has conocido?</label><select name="conocido" required>
+                            <option value="Foros">Foros</option>
+                            <option value="Revistas">Revistas</option>
+                            <option value="Amigos">Amigos</option>
+                            <option value="Buscadores">Buscadores</option>
+                        </select></div><br><br><br>
+                    <div id="bloque5"><label>Temas que te intresan:</label><br>
+                        SEGA<input type="checkbox" name="interes[]" value="SEGA">
+                        Sonic Team<input type="checkbox" name="interes[]" value="Sonic Team">
+                        AM2<input type="checkbox" name="interes[]" value="AM2">
+                        Yu Suzuki<input type="checkbox" name="interes[]" value="Yu Suzuki"></div><br>
+                        <div id="bloque6"><input id="login" type="submit" name="registrate" value="Regístrate" /></div>                
+                </form>
+            </div>
+        </section>
+        <aside id="floatizq">
+        </aside>
+        <div id="floatder"></div>
+        <footer>
+            <div>info cuadrado gris</div>
+            <div>info cuadrado gris</div>
+            <div>info cuadrado gris</div>
+        </footer>
+    </body>
+</html>

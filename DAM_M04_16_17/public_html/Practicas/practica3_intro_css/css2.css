@@ -1,0 +1,43 @@
+#h1 {
+    text-align: right;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 110px;
+    background-color: #66cc00;
+    border-color: green;
+    border-style: dashed;
+    border-width: 2px;
+    color: white;
+}
+
+#logoWeb {    
+   text-align: left;
+   display: inline-block;
+   height: 50%;
+   width: 50%;    
+}
+
+.blackisback {
+    background-color: black;
+    color: white;
+}
+
+.blanco {
+    color: white;
+}
+
+.red {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+}
+
+.blueback {
+    color: white;
+    text-align: center;
+    display: inline-block;
+}
+
+#l2 { 
+    background-color: blue;
+}

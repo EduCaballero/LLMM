@@ -1,0 +1,85 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+section{
+    height: 100%;
+    width: 100%;
+}
+
+#rojoup{
+    height: 200px;
+    width: 100%;
+    display: block;
+}
+
+#rojodown{
+    height: 450px;
+    width: 100%;
+    display: block;
+}
+
+#verdeizq{
+    height: 100%;
+    width: 30%;
+    background-color: blue;
+    display: inline-block;
+}
+
+#verdeder{
+    display: inline-block;
+    height: 100%;
+    width: 70%;
+    background-color: green;
+}
+
+#verdeizq2{
+    height: 100%;
+    width: 30%;
+    display: inline-block;
+}
+
+#verdeder2{
+    height: 100%;
+    width: 70%;
+    display: inline-block;
+    text-align: center;
+    background-color: wheat;
+    vertical-align: top;
+}
+
+#rosaup{
+    height: 80%;
+    display: block;
+    background-color: grey;
+}
+
+#rosadown{
+    display: block;
+    background-color: blue;
+    height: 20%;
+}
+
+#rosaizq{
+    height: 290px;
+    width: 300px;
+    display: inline-block;
+    background-color: grey;
+    margin-right: 5px;
+    margin-top: 10%;
+}
+
+#rosader{
+    height: 290px;
+    width: 300px;
+    display: inline-block;
+    background-color: grey;
+    margin-left: 5px;
+    margin-top: 10%;
+}

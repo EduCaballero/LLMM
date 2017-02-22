@@ -1,0 +1,130 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+section{
+    height: 100%;
+    width: 100%;
+}
+
+#rojoup{
+    display: block;
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    background-color: wheat;
+}
+
+#rojodown{
+    display: block;
+    width: 100%;
+    height: 600px;
+}
+
+#verde1{
+    display: inline-block;
+    height: 85%;
+    width: 25%;
+    background-color: blue;
+    margin: 20px;
+}
+
+#verde2{
+    display: inline-block;
+    height: 85%;
+    background-color: blue;
+    width: 35%;
+    margin: 20px;
+}
+
+#verde3{
+    display: inline-block;
+    height: 85%;
+    width: 30%;
+    background-color: blue;
+    margin: 20px;
+}
+
+#verdeizq{
+    display: inline-block;
+    width: 60%;
+}
+
+#verdeder{
+   display: inline-block; 
+   width: 40%;
+}
+#extra1{
+    display: block;
+    height: 300px;
+}
+
+#extra2{
+    display: block;
+    height: 300px;
+}
+
+#a1{
+    display: inline-block;
+    height: 300px;
+    width: 49%;
+    background-color: grey;
+    border-style: solid;
+    border-bottom-color: black;
+    border-width: 1px;
+    top: 0;
+    left: 0;
+}
+
+#a2{
+    display: inline-block;
+    height: 300px;
+    width: 49%;
+    background-color: grey;
+    border-style: solid;
+    border-bottom-color: black;
+    border-width: 1px;
+    top: 0;
+    right: 0;
+}
+
+#a3{
+    display: inline-block;
+    height: 50%;
+    width: 49%;
+    background-color: grey;
+    border-style: solid;
+    border-bottom-color: black;
+    border-width: 1px;
+    bottom: 0;
+    left: 0;
+}
+
+#a4{
+    display: inline-block;
+    height: 300px;
+    width: 49%;
+    background-color: grey;
+    border-style: solid;
+    border-bottom-color: black;
+    border-width: 1px;
+    bottom: 0;
+    right: 0;
+}
+
+#amarillo{
+    display: inline-block;
+    background-color: orange;
+    height: 125px;
+    width: 450px;
+    min-width: 200px;
+    bottom: 20px;
+    right: 20px;
+    position: fixed;
+}

@@ -1,0 +1,39 @@
+#section{
+    width: 100%;
+    height: 700px;
+}
+
+#rojo{
+    display: inline-block;
+    background-color: red;
+    height: 100%;
+    width: 30%;
+}
+
+#a2{
+    display: inline-block;
+    height: 100%;
+    width: 70%;
+}
+
+#rosa{
+    display: block;
+    height: 45%;
+    width: 100%;
+    background-color: pink;
+}
+
+#naranja{
+    display: block;
+    height: 10%;
+    width: 100%;
+    background-color: orange;
+}
+
+#verde{
+    display: block;
+    height: 45%;
+    width: 100%;
+    background-color: green;
+}
+
