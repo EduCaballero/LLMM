@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+con esta función hacemos que se nos muestren los datos id, name y value de los botones que pulsemos
+-->
+<html>
+    <head>
+        <title>Llamar a funciones</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function informeBoton(botonId, botonNombre, botonValor){
+                //información sobre la id del botón
+                // \n es un caracter de nueva linea, es para hacer que el mensaje siguiente aparezca en otra línea
+                var userMessage1="Id del botón: " + botonId + "\n";
+                //información sobre el nombre del botón
+                var userMessage2="Nombre del botón: " + botonNombre + "\n";
+                //y sobre el valor del botón (value)
+                var userMessage3="Valor del botón: " + botonValor + "\n";
+                //sacamos el mensaje con la información de esas tres variables
+                alert(userMessage1+userMessage2+userMessage3);
+            }
+            
+            //ahora una función con retorno para hallar el area de un círculo
+            function areaCirculo(r){
+                this.r=r; //esto es para llamarlo luego fuera y hacer le mensaje que sale más entendible
+                return 3.1416*(r*r);
+            }
+            
+            
+        </script>
+    </head>
+    <body>
+        <input type="button" id="id1" name="Botón izquierdo" value="Izquierdo"
+               onclick="informeBoton(this.id, this.name, this.value)"/>
+        <input type="button" id="id2" name="Botón centro" value="Centro"
+               onclick="informeBoton(this.id, this.name, this.value)"/>
+        <input type="button" id="id3" name="Botón derecho" value="Derecho"
+               onclick="informeBoton(this.id, this.name, this.value)"/>
+        
+        <!--//esto es para la función con return-->
+        <br>
+        <script>
+            var r=r;
+            var resultado=areaCirculo(4);
+            document.write("El área del círculo de radio "  + r + " es: " + resultado);
+        </script>
+    </body>
+</html>
