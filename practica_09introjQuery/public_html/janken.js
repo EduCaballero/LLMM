@@ -18,7 +18,7 @@ function fight(){
                             "left":"0px", "top":"0px"});
     $("#jugador2>img, #fight, #player1Win, #player2Win, #draw").fadeOut();
     $("#jugador1>img").mouseenter(seleccionar);
-    //$("#jugador1>img").mouseleave(desseleccionar);
+    $("#jugador1>img").mouseleave(desseleccionar);
     $("#jugador1>img").click(click1);
     $("#jugador2>img").click(click2);
     
@@ -38,9 +38,9 @@ function seleccionar(){
 }
 //con esto hago que vuelvan al tamaño original, aunque no lo pide
 //explícitamente la práctica, creo que sería así
-/*function desseleccionar(){
-    $("img").animate({"height": "120px", "width": "120px"}, {"duration": 300});
-}*/
+function desseleccionar(){
+    $(this).parent().children("img").animate({"height": "120px", "width": "120px"}, {"duration": 300});
+}
 
 var opcion1;
 function click1(){
@@ -54,7 +54,7 @@ function click1(){
     $("#jugador2>img").fadeIn();
     $("#jugador2>h3").css({"background-color":"blue"});
     $("#jugador2>img").mouseenter(seleccionar);
-    //$("#jugador2>img").mouseleave(desseleccionar); no puedo utilizarlo o me aparece las manos de jugador 1    
+    $("#jugador2>img").mouseleave(desseleccionar); //no puedo utilizarlo o me aparece las manos de jugador 1    
 }
 
 var opcion2;
