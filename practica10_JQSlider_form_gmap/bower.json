@@ -1,0 +1,12 @@
+{
+    "name": "practica10_JQSlider_form_gmap",
+    "version": "1.0.0",
+    "main": "path/to/main.css",
+    "ignore": [
+        ".jshintrc", "**/*.txt"
+    ],
+    "dependencies": {
+    },
+    "devDependencies": {
+    }
+}

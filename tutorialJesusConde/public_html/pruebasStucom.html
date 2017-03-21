@@ -11,9 +11,15 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+        <div onclick="numeros();">Ejercicio 1</div>
         <script>
+            function numeros(){
             var pedimosPorPantalla= prompt("Introduce algo"); //con esto pido introducir datos con una ventana de emergente.
-            
+            pedimosPorPantalla=parseInt(pedimosPorPantalla);
+            for(var i=0;i<pedimosPorPantalla;i++){
+                console.log(i);
+            }
+        }
         </script>
     </body>
 </html>
