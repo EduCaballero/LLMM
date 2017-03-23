@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery-3.1.1.min.js"></script>
+        <script src="jquery-validation-1.16.0/dist/jquery.validate.js" type="text/javascript"></script>
+    </head>
+    <body>
+  
+         
+         <form id="formulario2" method="post">
+            <fieldset>
+                <legend> #Formulario 2 </legend>
+                <p>
+                    <label for="name"> Nombre <span> ( Obligatorio, minimo 3 letras) </span> </label>
+                    <input id="name" name="name" type="text" minlength="3" required />       
+                </p>     
+                <p>
+                    <label for="codigo"> Codigo de barras <span> ( Opcional, 13 numeros) </span> </label>
+                    <input id="codigo" name="codigo" minlength="13" maxlength="13" type="number" />       
+                </p>
+                <p>
+                    <label for="caducidad"> Caducidad <span> ( Opcional, AAAA-MM-DD ) </span> </label>
+                    <input id="caducidad" name="caducidad" type="date" />       
+                </p> 
+                <p>
+                    <form method="post">
+                       Estado:<br /> 
+                           <select name="programa" required>    
+                               <option value="Windows" selected="selected"> Normal </option>
+                               <option value="Machintosh"> Oferta </option>
+                               <option value="Linux"> Descuento </option>
+                           </select>
+                    </form>
+                </p> 
+                <p>
+                    <input id="agree" name="agree" type="checkbox" required />
+                    <label for="agree"> Acepta las condiciones <span> (Obligatorio) </span> </label>       
+                </p>
+                
+                <p>
+                    <label for="nutri"> Tiene informacion nutricional? </label>  
+                    <input id="nutri" class="checkbox" name="agree" type="checkbox" name="nutri" />
+                </p>
+                
+                <fieldset id="nutri">
+                <legend> Informacion Nutricional </legend>
+                <p>
+                    <label for="name"> Grasas  </label>
+                    <input id="grasas" name="grasas" type="text"  />       
+                </p>     
+                <p>
+                    <label for="codigo"> azucares </label>
+                    <input id="azucares" name="azucares" type="text" />       
+                </p>
+                <p>
+                    <label for="caducidad"> fibra </label>
+                    <input id="fibra" name="fibra" type="text" />       
+                </p> 
+                
+                </fieldset>
+                <p>
+                    <input class="submit" type="submit" value="Enviar">
+                </p>
+                
+        </form>
+        
+        <script>
+            $("#formulario2").validate();
+        </script>
+        
+    </body>
+</html>
