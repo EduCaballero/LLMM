@@ -16,9 +16,24 @@ and open the template in the editor.
         <form id="formulari1" method="POST">
             <fieldset>
                 <legend>Formulari 1:</legend>
-                <p><label for="nombre">Nombre: <span>obligatorio, mínimo tres letras</span></label><input name="nombre" id="nombre"></p>
                 <p>
-                    <label for="codBarras">Codigo de barras: <span>(opcional 13 numeros)</span>
+                    <label for="nombre">Nombre: <span>(obligatorio, mínimo tres letras)</span></label>
+                    <input name="nombre" id="nombre" type="text" pattern=".{3,}" required/>
+                </p>
+                <p>
+                    <label for="apellido">Apellido <span>(obligatorio, mínimo 4 letras)</span>
+                    <input name="apellido" id="apellido" type="text" pattern=".{4,}" required/>
+                </p>
+                <p>
+                    <label for="fechaNac">Fecha de nacimiento <span>(Obligatorio, fecha válida</span></label>
+                    <input name="fechaNac" id="fechaNac" type="date" placeholder="AAAA-MM-DD" required/>
+                </p>
+                <p>
+                    <label for="numPC">Número de PC's en casa <span>(obligatorio, de 0 a 10</span></label>
+                </p>
+                <p>
+                    <input id="agree" name="agree" type="checkbox" required/>
+                    <label for="agree">Acepta las condiciones <span>(Obligatorio)</span></label>
                 </p>
                 
                 <label for="ordenadores">Numero de hermanos: </label><input class="hermanos" name="hermanos"  id="ordenadores"><br>
