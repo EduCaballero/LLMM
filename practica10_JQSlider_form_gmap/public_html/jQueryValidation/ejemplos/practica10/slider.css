@@ -1,0 +1,47 @@
+html,body {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: lightblue;
+}
+
+#slider-wrapper {
+	width: 100%;
+	text-align: center;
+}
+
+.slider {
+	display: inline-block;
+	width: 75%;
+}
+
+.prevArrow {
+	background-image: url(left.png);
+	background-size: cover;
+	left: -25px;
+}
+
+.nextArrow {
+	background-image: url(right.png);
+	background-size: cover;
+	right: -25px;
+}
+
+.arrow-prev,
+.arrow-next {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}

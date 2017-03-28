@@ -6,7 +6,7 @@ body{
     height: 100%;
 }
 label{
-    display: block;
+    display: inline-block;
 }
 form{
     display: block;

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="forms.css">
+	<script src="jquery-3.1.1.min.js" type="text/javascript"></script>
+	<script src="dist/jquery.validate.min.js" type="text/javascript"></script>
+</head>
+<body>
+	<h1>Formularios</h1>
+	<form id="form1" action="" method="post">
+		<p><label>Nombre</label><input id="nom" type="text" name="nombre" minlength="3" required></p>
+		<p><label>Apellido</label><input id="ape" type="text" name="apellido" minlength="4" required></p>
+		<p><label>Nacimiento</label><input id="nac" type="date" name="nacimiento" required></p>
+		<p><label>Numero de PCs en casa</label><input id="numpc" type="number" required></p>
+		<div id="condiciones"><label><input type="checkbox" id="agree" name="acepto" required> Acepto Condiciones</div></label>
+		<input type="submit" value="Enviar"> 
+	</form>
+	<form id="form2" action="" method="post">
+		<p><label>Nombre</label><input type="text" name="nombre2"></p>
+		<p><label>Codigo de Barras</label><input type="text" name="barras"></p>
+		<p><label>Caducidad</label><input type="date" name="caducidad"></p>
+		<p><label>Estado</label><select name="estado">
+		<option value="normal">Normal</option>
+		<option value="oferta">Oferta</option>
+		<option value="descuento">Descuento</option>
+		</select></p>
+		<div id="info"><label><input type="checkbox" id="infocheck" name="info"> Tiene informacion nutricional?</label></div>
+		<div id="infoNutricional">
+			<p><label>Grasas</label><input type="text" name="grasas"></p>
+			<p><label>Azucares</label><input type="text" name="azucares"></p>
+			<p><label>Fibra</label><input type="text" name="fibra"></p>
+		</div>
+		<input type="submit" value="Alta Producto">
+	</form>
+	<script>
+		$(document).ready(function() {
+			$("#form1").validate();
+			$("#form2").validate({
+				rules: {
+					nombre2: {
+						required: true,
+						minlength: 3
+					},
+					barras: {
+						minlength: 13
+					},
+					estado: "required",
+					caducidad: "date"
+				},
+				messages: {
+					nombre2: {
+						required: "Por favor introduce un nombre",
+						minlength: "El nombre debe contener al menos 3 letras"
+					},
+					barras: {
+						minlength: "El codigo de barras debe contener al menos 13 numeros"
+					},
+					estado: "Por favor acepta las condiciones",
+					caducidad: "Introduce una fecha valida"
+				}
+			});
+		});
+		var infocheck = $("#infocheck");
+		var checked = infocheck.is(":checked");
+		var infonutri = $("#infoNutricional")[checked ? "removeClass" : "addClass"]("hide");
+		var infoInputs = infonutri.find("input").attr("disabled",!checked);
+		infocheck.click(function() {
+			infonutri[this.checked ? "removeClass" : "addClass"]("hide");
+			infoInputs.attr("disabled",!this.checked);
+		});
+
+	/*
+		function infonutri() {
+			if (document.getElementById('infocheck').checked == true) {
+				document.querySelector("#infoNutricional").style.display = "block";
+			}	
+			else document.querySelector("#infoNutricional").style.display = "none";
+		}
+	*/
+	</script>
+</body>
+</html>

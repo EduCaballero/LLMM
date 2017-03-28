@@ -9,6 +9,7 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet" type="text/css"/>
         <script src="jquery-3.1.1.js" type="text/javascript"></script>
         <script src="jquery.validate.js" type="text/javascript"></script>
     </head>
@@ -18,27 +19,31 @@ and open the template in the editor.
                 <legend>Formulari 1:</legend>
                 <p>
                     <label for="nombre">Nombre: <span>(obligatorio, mínimo tres letras)</span></label>
-                    <input name="nombre" id="nombre" type="text" pattern=".{3,}" required/>
+                    <input name="nombre" id="nombre" type="text" minlength="3" required/>
                 </p>
                 <p>
-                    <label for="apellido">Apellido <span>(obligatorio, mínimo 4 letras)</span>
-                    <input name="apellido" id="apellido" type="text" pattern=".{4,}" required/>
+                    <label for="apellido">Apellido <span>(obligatorio, mínimo 4 letras)</span></label>
+                    <input name="apellido" id="apellido" type="text" minlength="4" required/>
                 </p>
                 <p>
                     <label for="fechaNac">Fecha de nacimiento <span>(Obligatorio, fecha válida</span></label>
-                    <input name="fechaNac" id="fechaNac" type="date" placeholder="AAAA-MM-DD" required/>
+                    <input name="fechaNac" id="fechaNac" type="date" required/>
                 </p>
                 <p>
                     <label for="numPC">Número de PC's en casa <span>(obligatorio, de 0 a 10</span></label>
+                    <input name="numPC" id="numPC" type="number" required/>
                 </p>
                 <p>
-                    <input id="agree" name="agree" type="checkbox" required/>
-                    <label for="agree">Acepta las condiciones <span>(Obligatorio)</span></label>
+                    <input id="agree" name="agree" type="checkbox" required/><label for="agree">Acepta las condiciones <span>(Obligatorio)</span></label>
                 </p>
                 
-                <label for="ordenadores">Numero de hermanos: </label><input class="hermanos" name="hermanos"  id="ordenadores"><br>
                 <input class="btn-validate" type="submit" value="Validar">
             </fieldset>
         </form>
+        <script>
+            $(document).ready(function() {
+            $("#formulari1").validate();
+        });
+        </script>
     </body>
 </html>
