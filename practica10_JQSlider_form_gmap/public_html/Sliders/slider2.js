@@ -1,10 +1,7 @@
-
 $(document).ready(ini);
-    function ini() {
+function ini() {
     $('.slider').slick({
-      infinite: true,
-      slidesToShow: 2,
-      slidesToScroll: 2,
-      autoplay:true  
+        autoplay: true,
+        dots:true
     });
 }

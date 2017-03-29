@@ -12,3 +12,6 @@ form{
     display: block;
     margin-bottom: 50px;
 }
+.hide {
+ 	display: none;
+ }

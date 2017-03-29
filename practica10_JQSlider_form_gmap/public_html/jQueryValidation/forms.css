@@ -1,0 +1,42 @@
+form {
+	width: 350px;
+	display: inline-block;
+	margin-right: 30px;
+	vertical-align: top;
+}
+
+ #form1 {
+ 	text-align: center;
+ }
+
+#condiciones, #infoNutricional, #info {
+	margin-bottom: 15px;
+}
+
+p {
+	text-align: left;
+}
+
+p>label {
+	float: left;
+}
+
+p>input, select {
+	margin-left: 170px;
+	display: block;
+
+}
+
+#condiciones>input {
+	display: inline-block;
+}
+
+.hide {
+ 	display: none;
+ }	
+
+ label.error {
+ 	float:unset;
+ 	font-weight: bold;
+ 	color: red;
+ }
