@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>practica 12 jQDOM</title>
+        <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="slick/slick.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <link rel="stylesheet" href="form.css">
+        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    </head>
+    <body>
+        <!-- CABACERA -->
+        <header>
+            <img src="consoleWars.jpg" alt="">
+        </header>
+        <!-- SLIDER -->
+        <div id="centrarSlider">
+            <div class="slider">
+                <div>
+                    <img src="megacd32x.jpg" height="200" width="300" alt="">
+                </div>
+                <div>
+                    <img src="neogeo.jpg" height="200" width="300" alt="">
+                </div>
+                <div>
+                    <img src="super.jpg" height="200" width="300" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="imgMedio"></div>
+        <!-- FORMULARIOS -->
+        <div id="container">
+            <form id="playerForm" action="resultado.php" method="post">
+                <div id="p1">
+                    <h2 id="clickp1">PLAYER 1</h2>
+                    <p>
+                        <label class="inplb">Direccion:</label>
+                        <input type="text" name="addrp1">
+                    </p>
+                    <p>
+                        <label class="inplb">Edad:</label>
+                        <input type="number" name="agep1">
+                    </p>
+                    <p>
+                        <label class="inplb">Introduce eslogan(máximo 8 letras, obligatorio)</label>
+                        <input type="text" name="eslogan1">
+                    </p>
+                    <p>
+                        <label class="inplb">Personaje:</label>
+                        <select id="chr1" name="charp1">
+                            <option value="megacd32x">SEGA MegaDrive MegaCD 32x</option>
+                            <option value="neogeo">Neo Geo</option>
+                            <option value="super">Super Nintendo</option>
+                        </select>
+                    </p>
+                </div><div id="p2">
+                    <h2>PLAYER 2</h2>
+                    <p>
+                        <label class="inplb">Direccion:</label>
+                        <input type="text" name="addrp2">
+                    </p>
+                    <p>
+                        <label class="inplb">Edad:</label>
+                        <input type="number" name="agep2">
+                    </p>
+                    <p>
+                        <label class="inplb">Introduce eslogan(máximo 8 letras, obligatorio)</label>
+                        <input type="text" name="eslogan2">
+                    </p>
+                    <p>
+                        <label class="inplb">Personaje:</label>
+                        <select id="chr2" name="charp2">
+                            <option value="megacd32x">SEGA MegaDrive MegaCD 32x</option>
+                            <option value="neogeo">Neo Geo</option>
+                            <option value="super">Super Nintendo</option>
+                        </select>
+                    </p>
+                </div>
+                <!--<div id="p3">
+                    <h2>ESLOGAN</h2>
+                    <p>
+                        <label class="inplb">Introduce eslogan(máximo 8 letras, obligatorio)</label>
+                        <input type="text" name="eslogan">
+                    </p>
+                </div>-->
+                <div id="submit-row">
+                    <input type="submit" value="FIGHT">
+                </div>
+                <div id="images"></div>
+            </form>
+        </div>
+    </body>
+</html>

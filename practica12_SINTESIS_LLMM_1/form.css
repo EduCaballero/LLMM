@@ -1,0 +1,101 @@
+html,body {
+	padding: 0;
+	margin: 0;
+	background-color: appworkspace;
+}
+	
+header {
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+header>img {
+	height: 250px;
+} 
+
+#centrarSlider {
+	max-width: 1000px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.slider {
+	display: inline-block !important; 
+	max-width: 100%;
+	margin-bottom: 20px;
+}
+
+#container {
+	margin: 0 auto;
+	max-width: 1000px;
+	color: white;
+	margin-bottom: 80px;
+}
+
+#p1,#p2,#p3 {
+	vertical-align: top;
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 10px;
+	width: 50%;
+
+}
+
+h2 {
+	text-align: center;
+	background-color: lightgray;
+	color: black;
+}
+
+
+.inplb {
+	float: left;
+}
+
+#playerForm p input,select {
+	margin-left: 170px;
+	display: block;
+}
+
+#submit-row {
+	text-align: center;
+	margin: 20px 0;
+}
+
+#submit-row input {
+	width: 150px;
+	border: 2px solid black;
+	font-size: 16px;
+	font-weight: bold;
+	background-color: lightgray;
+
+}
+
+.red {
+	background-color:red;
+}
+
+.green {
+	background-color: green;
+}
+
+.blue {
+	background-color: blue;
+}
+
+#imgp1 {
+	position: absolute;
+	left: 0;
+	height: 250px;
+}
+
+#imgp2 {
+	position: absolute;
+	right: 0;
+	height: 250px;
+}
+
+.slick-slide img {
+	display: inline-block !important;
+}
+
