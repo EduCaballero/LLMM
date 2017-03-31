@@ -15,15 +15,17 @@
     <body>
         
         <?php
-        $eslogan1=$_POST["eslogan1"];
-        $eslogan2=$_POST["eslogan2"];
+        $padre1=$_POST["padre1"];
+        $padre2=$_POST["padre2"];
         if (rand(1, 2) == 1) {
             $ganador = 1;
             $winner="Gana el Jugador 1";
-            $esloganganador=$eslogan1;
+            $padreganador=$padre1;
             $addr = $_POST["addrp1"];
+            $addrPerd=$_POST["addrp2"];
             $age = $_POST["agep1"];
             $char = $_POST["charp1"];
+            $charPerd= $_POST["charp2"];
             ?><audio controls autoplay loop preload="auto">
                 <source src="bensoundcute.mp3" type="audio/mpeg">
                 Audio no disponible.
@@ -32,10 +34,12 @@
         } else {
             $ganador = 2;
             $winner="Gana el Jugador 2";
-            $esloganganador=$eslogan2;
+            $padreganador=$padre2;
             $addr = $_POST["addrp2"];
+            $addrPerd=$_POST["addrp1"];
             $age = $_POST["agep2"];
             $char = $_POST["charp2"];
+            $charPerd= $_POST["charp1"];
             ?>
         <audio controls autoplay loop preload="auto">
                 <source src="bensoundepic.mp3" type="audio/mpeg">
@@ -50,18 +54,15 @@
                     <img src="<?php echo $char ?>.jpg">
                 </div>
                 <div>
-                    <?php echo $age ?> 
-                </div>
-                <div>
-                    <?php echo $esloganganador ?>
+                    <img src="<?php echo $charPerd ?>.jpg"> 
                 </div>
             </div>
         </div>
         <div id="map-wrapper">
             <h1>Mapa del vencedor!<br>
             <?php echo $winner ?></h1>
-            <h3>Eslogan jugador 1:<?php echo $eslogan1 ?><br>
-            Eslogan jugador 2:<?php echo $eslogan2 ?></h3>
+            <h3>Texto padre 1:<?php echo $padre1 ?><br>
+            Texto padre 2:<?php echo $padre2 ?></h3>
             <div id="map"></div>
         </div>
         <script>
@@ -71,11 +72,11 @@
                 })
                         .infowindow({})
                 .marker([
-                {address: "<?php echo $addr ?>", data: "<h3>Ganador <?php echo $ganador ?></h3><div>" +
+                {address: "<?php echo $addr ?>", data: "<h3>Ganador jugador <?php echo $ganador ?></h3><div>" +
                 "<p><b>Age: </b><?php echo $age ?> years</p>" +
                         "<p><b>Consola: </b><?php echo $char ?></p>" +
                         "<img src='<?php echo $char ?>.jpg'></div>"}
-            ,{address:"Stucom, Barcelona",data:"Eslogan del ganador: <?php echo $esloganganador ?>"}
+            ,{address:"<?php echo $addrPerd ?>",data:"Texto del padre perdedor: <?php echo $padreganador ?>"}
                 ])
                         .on('click', function (marker) {  //Al clicar obrim una finestra sobre la marca i hi insertem el data de la marca
                             marker.setIcon('http://maps.google.com/mapfiles/marker_green.png');

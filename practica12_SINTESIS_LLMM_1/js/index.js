@@ -11,14 +11,15 @@ $(document).ready(function () {
                 settings: {
                     slidesToShow: 1,
                     dots: true
-                }                
+                }
             },
             {
-                breakpoint:500,
-                settings:{
+                breakpoint: 500,
+                settings: {
                     slidesToShow: 2,
                     autoplay: true,
-                    autoplaySpeed: 1000
+                    autoplaySpeed: 1000,
+                    dots: false
                 }
             }
         ]
@@ -35,37 +36,37 @@ $(document).ready(function () {
             $(this).addClass('red');
         }
     });
-    
+
     //-------------------------------------------------
-    
-    $("#clickp1").click(function(){
+
+    $("#clickp2").click(function () {
         var img = $("<img id='imgBorrar' src='segadoes.jpg'>");
         //$("#imgMedio").remove();
         $("#imgMedio").append(img);
         /*$("#imgBorrar").animate({
-            right:"20%"
-        });*/
+         right:"20%"
+         });*/
     });
     //----------------------------------------------------
-    $("#imgMedio").click(function(){
+    $("#clickp1").click(function () {
         $("#imgBorrar").remove();
         //$("#imgMedio").append(img);
         /*$("#imgBorrar").animate({
-            right:"20%"
-        });*/
+         right:"20%"
+         });*/
     });
-    
-    
+
+
     /*function situaFitxa() {
-        var img = $("src=segadoes.jpg");
-//    $("#fitxa_seleccionada>img").off();
-        //img.off();
-        $(this).click("#clickp1");
-        $(this).children("img").appendTo($("#fitxa_seleccionada"));
-        $(this).append(img);
-    }*/
-    
-    
+     var img = $("src=segadoes.jpg");
+     //    $("#fitxa_seleccionada>img").off();
+     //img.off();
+     $(this).click("#clickp1");
+     $(this).children("img").appendTo($("#fitxa_seleccionada"));
+     $(this).append(img);
+     }*/
+
+
     $('#chr1').change(function () {
         var chara = $(this).val();
         chara = chara + ".jpg";
@@ -85,20 +86,49 @@ $(document).ready(function () {
         $("#imgp2").animate({
             right: "20%"
         });
+        $("#imgp2").click(function () {
+            $(this).animate({
+                height: "100px",
+                width: "100px"
+            }, 3000);
+
+        });
     });
-    
-    //----------------------------
-    $("#images").click(function(){
-        $("#imgp1").animate({
-            top: "100"
-        },2000);
-        $("#imgp2").animate({
-            top: "100"
-        },2000);
-    });
-    
-        
-    
+
+//    //----------------------------
+//    $("#imgp1").click(function () {
+//        $("#imgp1").animate({
+//            height: "100px",
+//            width: "100px"
+//        }, 3000);
+//        $("#imgp2").animate({
+//            height: "100px",
+//            width: "100px"
+//        }, 3000);
+//    });
+
+    /*function small(){
+     $("#imgp1").click(seleccionar);
+     $("#imgp2").click(seleccionar);
+     }*/
+
+    //$("#images").click(seleccionar);
+
+    /*$("#imgp1").click(function(){
+     var id = $(this).parent("div").attr("id");
+     $("#" + id + ">img").stop();
+     $("#" + id + ">img").animate({"height": "100px", "width": "100px"}, {"duration": 3000});
+     });*/
+
+
+    function seleccionar() {
+        var id = $(this).parent("div").attr("id");
+        $("#" + id + ">img").stop();
+        $("#" + id + ">img").animate({"height": "100px", "width": "100px"}, {"duration": 3000});
+    }
+
+    //{"height": "100px", "width": "100px"}
+
     $('#playerForm').validate({
         rules: {
             addrp1: {
@@ -122,12 +152,14 @@ $(document).ready(function () {
                 min: 18,
                 max: 99
             },
-            eslogan1: {
+            padre1: {
                 required: true,
+                minlength: 2,
                 maxlength: 8
             },
-            eslogan2: {
+            padre2: {
                 required: true,
+                minlength: 2,
                 maxlength: 8
             },
             charp2: "required"
@@ -152,13 +184,15 @@ $(document).ready(function () {
                 min: "Debes ser mayor de edad! (18)",
                 max: "Demasiado viejo (menor de 99)"
             },
-            eslogan1: {
-                required:"eslogan obligatorio",
-                maxlength:"Longitud máxima del eslogan es de 8 letras"
+            padre1: {
+                required: "padre obligatorio",
+                minlength: "Longitud min del padre es de 2 letras",
+                maxlength: "Longitud m del padre es de 8 letras"
             },
-            eslogan2: {
-                required:"eslogan obligatorio",
-                maxlength:"Longitud máxima del eslogan es de 8 letras"
+            padre2: {
+                required: "padre obligatorio",
+                minlength: "Longitud min del padre es de 8 letras",
+                maxlength: "Longitud máxima del padre es de 8 letras"
             },
             charp2: {
                 required: "Selecciona un personaje"
