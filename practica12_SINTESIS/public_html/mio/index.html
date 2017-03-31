@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>practica 12 jQDOM</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+        <script src="js/jquery.validate.min.js" type="text/javascript"></script>
+        <script src="slick/slick.min.js" type="text/javascript"></script>
+        <link href="slick/slick.css" rel="stylesheet" type="text/css"/>
+        <link href="slick/slick-theme.css" rel="stylesheet" type="text/css"/>
+        <script src="js/index.js" type="text/javascript"></script>
+        <link href="index.css" rel="stylesheet" type="text/css"/>
+        
+    </head>
+    <body>
+        <!-- CABACERA -->
+        <header><img src="consoleWars.jpg" alt=""/></header>
+        <!-- SLIDER -->
+        <div id="centrarSlider">
+            <div class="slider">
+                <div>
+                    <img src="megacd32x.jpg" height="200" width="300" alt="">
+                </div>
+                <div>
+                    <img src="neogeo.jpg" height="200" width="300" alt="">
+                </div>
+                <div>
+                    <img src="super.jpg" height="200" width="300" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- FORMULARIOS -->
+        <div id="formulario">
+            <form id="formJugadores" action="resultado.php" method="post">
+                <div id="player1">
+                    <h2>PLAYER 1</h2>
+                    <p>
+                        <label class="lab1">Direccion:</label>
+                        <input type="text" name="dir1">
+                    </p>
+                    <p>
+                        <label class="lab1">Edad:</label>
+                        <input type="number" name="edad1">
+                    </p>
+                    <p>
+                        <label class="lab1">Personaje:</label>
+                        <select id="jug1" name="jug1">
+                            <option value="sega">SEGA MegaDrive MegaCD 32x</option>
+                            <option value="nintendo">Super Nintendo</option>
+                            <option value="snk">Neo Geo</option>
+                        </select>
+                    </p>
+                </div>
+                <div id="player2">
+                    <h2>PLAYER 2</h2>
+                    <p>
+                        <label class="lab1">Direccion:</label>
+                        <input type="text" name="dir2">
+                    </p>
+                    <p>
+                        <label class="lab1">Edad:</label>
+                        <input type="number" name="edad2">
+                    </p>
+                    <p>
+                        <label class="lab1">Personaje:</label>
+                        <select id="jug2" name="jug2">
+                            <option value="sega">SEGA MegaDrive MegaCD 32x</option>
+                            <option value="nintendo">Super Nintendo</option>
+                            <option value="snk">Neo Geo</option>
+                        </select>
+                    </p>
+                </div>
+                <div id="envio">
+                    <input type="submit" value="FIGHT">
+                </div>
+                <div id="contendientes"></div>
+            </form>
+        </div>
+    </body>
+</html>

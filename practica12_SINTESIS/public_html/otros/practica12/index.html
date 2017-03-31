@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form</title>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="slick/slick.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<link rel="stylesheet" href="form.css">
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+</head>
+<header>
+	<img src="Dragon_Ball_Logo.png" alt="">
+</header>
+<body>
+	<div id="slider-wrapper">
+		<div class="slider">
+			<div>
+				<img src="goku.jpg" alt="">
+			</div>
+			<div>
+				<img src="krilin.jpg" alt="">
+			</div>
+			<div>
+				<img src="roshi.jpg" alt="">
+			</div>
+		</div>
+	</div>
+	<div id="container">
+		<form id="playerForm" action="resultado.php" method="post">
+			<div id="p1">
+				<h2>PLAYER 1</h2>
+				<p>
+					<label class="inplb">Direccion:</label>
+					<input type="text" name="addrp1">
+				</p>
+				<p>
+					<label class="inplb">Edad:</label>
+					<input type="number" name="agep1">
+				</p>
+				<p>
+					<label class="inplb">Personaje:</label>
+					<select id="chr1" name="charp1">
+						<option value="goku">Goku</option>
+						<option value="krilin">Krilin</option>
+						<option value="roshi">Fullet Tortuga</option>
+					</select>
+				</p>
+			</div><div id="p2">
+				<h2>PLAYER 2</h2>
+				<p>
+					<label class="inplb">Direccion:</label>
+					<input type="text" name="addrp2">
+				</p>
+				<p>
+					<label class="inplb">Edad:</label>
+					<input type="number" name="agep2">
+				</p>
+				<p>
+					<label class="inplb">Personaje:</label>
+					<select id="chr2" name="charp2">
+						<option value="goku">Goku</option>
+						<option value="krilin">Krilin</option>
+						<option value="roshi">Fullet Tortuga</option>
+					</select>
+				</p>
+			</div>
+			<div id="submit-row">
+				<input type="submit" value="FIGHT">
+			</div>
+			<div id="images"></div>
+		</form>
+	</div>
+</body>
+</html>
