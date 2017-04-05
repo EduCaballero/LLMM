@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+1.	Crea un nuevo documento XML con el siguiente código. 
+Añade dos habitaciones más con  sus atributos id y los elementos nombre, 
+mueble, puerta necesarios. Debe de estar bien formado, y seguir la misma estructura.
+-->
+
+
+<micasa>
+    <habitacion id='comedor'>
+        <funcion>comedor</funcion>
+        <nombre>comedor</nombre>
+        <mueble>mesa</mueble>
+        <mueble>sofá</mueble>
+        <puerta a='escalera'/>
+    </habitacion>
+    <habitacion id='cocina'>
+        <funcion>cocinar</funcion>
+        <nombre>cocina</nombre>
+        <mueble>estantes</mueble>
+        <mueble>bajo encimera</mueble>
+        <electrodomestico>nevera</electrodomestico>
+        <electrodomestico>microhondas</electrodomestico>
+        <puerta a='pasillo'/>
+    </habitacion>
+    <habitacion id='despacho'>
+        <funcion>trabajar</funcion>
+        <nombre>despacho</nombre>
+        <mueble>escritorio</mueble>
+        <mueble>silla de escritorio</mueble>
+        <puerta a='pasillo'/>
+    </habitacion>
+</micasa>
+
+<!--
+2.	Crear un documento en XML válido con la información de un único contacto. 
+        Se debe modelar como mínimo la siguiente información:
+•	Nombre, apellidos
+•	Edad
+•	dirección (calle, código postal, ciudad)
+•	medios de contacto: teléfono fijo, teléfono móvil, correo electrónico, etc..
+
+-->
+
+<persona>
+    <datosPersonales>
+        <nombre>Edu</nombre>
+        <apellidos>Strife Lockhart</apellidos>
+    </datosPersonales>
+    <direccion>
+        <calle>Mas Casanovas</calle>
+        <codPostal>08025</codPostal>
+        <ciudad>Barcelona</ciudad>
+    </direccion>
+    <contacto>
+        <telFijo>931111111</telFijo>
+        <telMovil>661560834</telMovil>
+        <email>aquielemail@gmail.com</email>
+    </contacto>
+</persona>
+
+<!--
+3.	A partir de la definición anterior crear un documento XML que 
+contenga información de una libreta de direcciones. Como mínimo debe contener 
+3 contactos. Añade como atributo si un contacto es un familiar o no y 
+si una dirección es el domicilio principal o no.
+-->
+<libretaDir>
+    <persona>
+    <datosPersonales>
+        <nombre>Edu</nombre>
+        <apellidos>Strife Lockhart</apellidos>
+    </datosPersonales>
+    <direccion>
+        <calle>Mas Casanovas</calle>
+        <codPostal>08025</codPostal>
+        <ciudad>Barcelona</ciudad>
+    </direccion>
+    <contacto>
+        <telFijo>931111111</telFijo>
+        <telMovil>661560834</telMovil>
+        <email>aquielemail@gmail.com</email>
+    </contacto>
+</persona>
+<persona>
+    <datosPersonales>
+        <nombre>edu3</nombre>
+        <apellidos>Strife Lockhart</apellidos>
+    </datosPersonales>
+    <direccion>
+        <calle>Mas Casanovas</calle>
+        <codPostal>08025</codPostal>
+        <ciudad>Barcelona</ciudad>
+    </direccion>
+    <contacto>
+        <telFijo>931111111</telFijo>
+        <telMovil>661560834</telMovil>
+        <email>aquielemail@gmail.com</email>
+    </contacto>
+</persona>
+<persona>
+    <datosPersonales>
+        <nombre>edu2</nombre>
+        <apellidos>Strife Lockhart</apellidos>
+    </datosPersonales>
+    <direccion>
+        <calle>Mas Casanovas</calle>
+        <codPostal>08025</codPostal>
+        <ciudad>Barcelona</ciudad>
+    </direccion>
+    <contacto>
+        <telFijo>931111111</telFijo>
+        <telMovil>661560834</telMovil>
+        <email>aquielemail@gmail.com</email>
+    </contacto>
+</persona>
+</libretaDir>

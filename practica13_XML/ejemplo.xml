@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Crear la estructura de un documento XML para almacenar informacion sobre
+juegos con un mínimo de 2 registros. Se debe modelar como mínimo la siguiente información:
+Nombre
+número de jugadores
+Fabricante
+temática
+Reviews y puntuaciones
+-->
+<juegos>
+    <juego>
+        <titulo>HearthStone</titulo>
+        <players>2</players>
+        <fabricante>Blizzard</fabricante>
+        <tematica>Card Pay-2-Win</tematica>
+        <reviews>
+            <review n_review="1">
+                <puntuacion>6</puntuacion>
+                <texto>Es una kaketa</texto>
+                <autor>Manolo</autor>
+            </review>
+            <review n_review="2">
+                <puntuacion>0</puntuacion>
+                <texto>Es una mierda</texto>
+                <autor>Edu</autor>
+            </review>
+        </reviews>
+    </juego>
+    <juego>
+        <titulo>Clash of clans</titulo>
+        <players>2</players>
+        <fabricante>Blizzard</fabricante>
+        <tematica>Card Pay-2-Win</tematica>
+        <reviews>
+            <review n_review="1">
+                <puntuacion>6</puntuacion>
+                <texto>Es una kaketa</texto>
+                <autor>Manolo</autor>
+            </review>
+            <review n_review="2">
+                <puntuacion>0</puntuacion>
+                <texto>Es una mierda</texto>
+                <autor>Edu</autor>
+            </review>
+        </reviews>
+    </juego>
+</juegos>
