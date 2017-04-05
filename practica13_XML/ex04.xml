@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--4.	Crea un documento XML que estructure información de distintos grupos de música. 
+Ha de poder estructurar correctamente como mínimo el nombre, el género, la web oficial, 
+el número de integrantes, la edad de los integrantes, el número de conciertos realizados i el número de fans.-->
+
+<grupos>
+    <grupo> <!--grupo 1 -->
+        <integrantes>
+            <numeroIntegrantes>2</numeroIntegrantes>
+            <edades>
+                <edad>20</edad>
+                <edad>30</edad>
+            </edades>
+        </integrantes>
+        <genero>rock&roll</genero>
+        <miscelanea>
+            <webOficial>notenemos.com</webOficial>
+            <conciertosRealizados>9</conciertosRealizados>
+            <numFans>8000</numFans>
+        </miscelanea>        
+    </grupo>
+    <grupo> <!--grupo 2 -->
+        <integrantes>
+            <numeroIntegrantes>3</numeroIntegrantes>
+            <edades>
+                <edad>20</edad>
+                <edad>30</edad>
+                <edad>35</edad>
+            </edades>
+        </integrantes>
+        <genero>blues</genero>
+        <miscelanea>
+            <webOficial>bluesbrothers.com</webOficial>
+            <conciertosRealizados>20</conciertosRealizados>
+            <numFans>20000000</numFans>
+        </miscelanea>        
+    </grupo>
+</grupos>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--5.	Crear un documento XML que contenga información de un equipo de jugadores de una liga. Como mínimo debe contener:
+  - de cada jugador el nombre, apellido, función principal, funciones secundarias, 
+  - de cada equipo el nombre del equipo, a qué juegan, ubicación, director, preparador, numero de victorias y derrotas de este año. 
+Añade un mínimo de dos registros de cada elemento con información distinta y coherente.-->
+
+
+<equipos>
+    <equipo>
+        <datosEquipo>
+            <nombreEquipo>perdedores f.c.</nombreEquipo>
+            <deporte>futbol</deporte>
+            <staff>
+                <ubicacion>marbella</ubicacion>
+                <director>jesus gil</director>
+                <preparador>chiquito</preparador>
+            </staff>
+            <estadisticas>
+                <anyo>
+                    <numero victorias="1"/>
+                    <numero derrotas="100"/>
+                </anyo>
+                <anyo>
+                    <numero victorias="2"/>
+                    <numero derrotas="99"/>
+                </anyo>
+            </estadisticas>
+        </datosEquipo>
+        <datosJugadores>
+            <jugador>
+                <nombre>ola</nombre>
+                <apellido>k ase</apellido>
+                <funcion principal="paquete"/>
+                <funcion secundaria="perderBalones"/>
+            </jugador>
+            <jugador>
+                <nombre>no</nombre>
+                <apellido>toy</apellido>
+                <funcion principal="esconderse"/>
+                <funcion secundaria="hacerFaltas"/>
+            </jugador>
+        </datosJugadores>
+    </equipo>
+    <equipo>
+        <datosEquipo>
+            <nombreEquipo>segundones f.c.</nombreEquipo>
+            <deporte>futbol</deporte>
+            <staff>
+                <ubicacion>barcelona</ubicacion>
+                <director>bartomeu</director>
+                <preparador>gaydiola</preparador>
+            </staff>
+            <estadisticas>
+                <anyo>
+                    <numero victorias="0"/>
+                    <numero derrotas="101"/>
+                </anyo>
+                <anyo>
+                    <numero victorias="0"/>
+                    <numero derrotas="100"/>
+                </anyo>
+            </estadisticas>
+        </datosEquipo>
+        <datosJugadores>
+            <jugador>
+                <nombre>leo</nombre>
+                <apellido>missing</apellido>
+                <funcion principal="escupir"/>
+                <funcion secundaria="tenerArcadas"/>
+            </jugador>
+            <jugador>
+                <nombre>Sergi</nombre>
+                <apellido>Paquets</apellido>
+                <funcion principal="fingir"/>
+                <funcion secundaria="quejarseAlArbitro"/>
+            </jugador>
+        </datosJugadores>
+    </equipo>
+</equipos>

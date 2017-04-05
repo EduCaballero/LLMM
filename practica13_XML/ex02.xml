@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+2.	Crear un documento en XML válido con la información de un único contacto. 
+        Se debe modelar como mínimo la siguiente información:
+•	Nombre, apellidos
+•	Edad
+•	dirección (calle, código postal, ciudad)
+•	medios de contacto: teléfono fijo, teléfono móvil, correo electrónico, etc..
+
+-->
+
+<persona>
+    <datosPersonales>
+        <nombre>Edu</nombre>
+        <apellidos>Strife Lockhart</apellidos>
+    </datosPersonales>
+    <direccion>
+        <calle>Mas Casanovas</calle>
+        <codPostal>08025</codPostal>
+        <ciudad>Barcelona</ciudad>
+    </direccion>
+    <contacto>
+        <telFijo>931111111</telFijo>
+        <telMovil>661560834</telMovil>
+        <email>aquielemail@gmail.com</email>
+    </contacto>
+</persona>
