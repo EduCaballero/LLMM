@@ -5,6 +5,7 @@ el número de integrantes, la edad de los integrantes, el número de conciertos 
 
 <grupos>
     <grupo> <!--grupo 1 -->
+        <nombre>grupo1guay</nombre>
         <integrantes>
             <numeroIntegrantes>2</numeroIntegrantes>
             <edades>
@@ -12,7 +13,7 @@ el número de integrantes, la edad de los integrantes, el número de conciertos 
                 <edad>30</edad>
             </edades>
         </integrantes>
-        <genero>rock&roll</genero>
+        <genero>rockAndRoll</genero>
         <miscelanea>
             <webOficial>notenemos.com</webOficial>
             <conciertosRealizados>9</conciertosRealizados>
@@ -20,6 +21,7 @@ el número de integrantes, la edad de los integrantes, el número de conciertos 
         </miscelanea>        
     </grupo>
     <grupo> <!--grupo 2 -->
+        <nombre>grupo2guay</nombre>
         <integrantes>
             <numeroIntegrantes>3</numeroIntegrantes>
             <edades>

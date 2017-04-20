@@ -11,8 +11,8 @@ Añade un mínimo de dos registros de cada elemento con información distinta y 
         <datosEquipo>
             <nombreEquipo>perdedores f.c.</nombreEquipo>
             <deporte>futbol</deporte>
+            <ubicacion>marbella</ubicacion>
             <staff>
-                <ubicacion>marbella</ubicacion>
                 <director>jesus gil</director>
                 <preparador>chiquito</preparador>
             </staff>
@@ -46,8 +46,8 @@ Añade un mínimo de dos registros de cada elemento con información distinta y 
         <datosEquipo>
             <nombreEquipo>segundones f.c.</nombreEquipo>
             <deporte>futbol</deporte>
+            <ubicacion>barcelona</ubicacion>
             <staff>
-                <ubicacion>barcelona</ubicacion>
                 <director>bartomeu</director>
                 <preparador>gaydiola</preparador>
             </staff>
