@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT bandeja (email)>
+<!ELEMENT email (correo, horario, asunto, enviado, contenido, archivos)>
+<!ELEMENT correo (#PCDATA)>
+<!ELEMENT horario (fecha, hora)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT hora (#PCDATA)>
+<!ELEMENT asunto (#PCDATA)>
+<!ELEMENT enviado (destinatario*)>
+<!ELEMENT destinatario (#PCDATA)>
+<!ELEMENT contenido (#PCDATA)>
+<!ELEMENT archivos (archivo*)>

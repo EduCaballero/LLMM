@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+5.	Crea un XML que permita almacenar información de contactos y el DTD asociado. 
+        Para cada contacto queremos guardar la siguiente información
+
+o	Nombre , Primer apellido, Segundo Apellido : (campos obligatorios y únicos)
+o	Edat: (campo obligatorio y únicos)
+o	Dirección , ha de contener los siguientes elementos:
+	Tipo_via, obligatorio, y con el atributo tipo que puede tener los valores:
+•	“calle” o “plaza” o “carretera”.
+	piso (opcional).
+	Puerta (opcional).
+	Numero, código postal,  población y país (obligatorios)
+o	Puede tener de cero a múltiples elementos teléfono con atributo tipo (posibles valores de tipo: “fijo”, “móvil”, “casa”, “trabajo”,...)
+o	Un elemento de nombre “es_familiar” que puede existir de 0 a 1 vez y que ha de estar vacío.
+
+-->
+
+<!--
+    TODO define vocabulary identification data
+    PUBLIC ID  : -//vendor//vocabulary//EN
+    SYSTEM ID  : http://server/path/__NAME__
+-->
+
+<!-- TODO define your own vocabulary/syntax. Example follows:  -->
+<!ELEMENT contactos (contacto)>
+<!ELEMENT contacto (nombre, apellidos, edad, direccion, telefonos, esFamiliar*)>
+<!ELEMENT apellidos (apellido+)>
+<!ELEMENT edad (#PCDATA)>
+<!ELEMENT direccion (tipo_via, piso*, puerta*, cp, poblacion, pais)>
+<!ATTLIST tipo_via tipo (calle|plaza|carretera) #REQUIRED>
+<!ELEMENT telefonos (telefono*)>
+<!ATTLIST telefono tipo (fijo|casa|movil|trabajo) #REQUIRED>
+<!ELEMENT esFamiliar EMPTY>

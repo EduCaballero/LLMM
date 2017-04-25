@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--3.	Crea un documento XML que contenga información sobre un email y el DTD asociado que valide que el XML contiene:
+o	Dirección de email de quién lo envía (obligatorio y único)
+o	Fecha y hora en la que se envía (obligatorio y único)
+o	Asunto (opcional y único)
+o	Email a quién va dirigido el sms (obligatorio y se puede repetir. Con un atributo obligatorio  que indique si es un contacto conocido)
+o	O bien un elemento “esSpam” o bien un elemento “noEsSpam” (obligatorio y único)
+o	Contenido del email (opcional y único)
+o	Archivos adjuntos (opcional y múltiple).
+-->
+<!DOCTYPE bandeja SYSTEM "ex02.dtd">
+<bandeja>
+    <email>
+        <correo>gmail@gmail.com</correo>
+        <horario>
+            <fecha>25/04/2017</fecha>
+            <hora>16:28</hora>
+        </horario>
+        <asunto>Nueva actualizacion de W10</asunto>
+        <enviado>
+            <destinatario conocido="si" spam="no">hotmail@hormail.com</destinatario>
+            <destinatario conocido="no" spam="si">yahoo@yahoo.com</destinatario>
+        </enviado>  
+        <contenido>Hola buenos dias, ...</contenido>
+        <archivos>
+            <archivo>mega 1 link no fake</archivo>
+        </archivos>
+    </email>    
+</bandeja

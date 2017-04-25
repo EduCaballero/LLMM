@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+5.	Crea un XML que permita almacenar información de contactos y el DTD asociado. Para cada contacto queremos guardar la siguiente información
+o	Nombre , Primer apellido, Segundo Apellido : (campos obligatorios y únicos)
+o	Edat: (campo obligatorio y únicos)
+o	Dirección , ha de contener los siguientes elementos:
+	Tipo_via, obligatorio, y con el atributo tipo que puede tener los valores:
+•	“calle” o “plaza” o “carretera”.
+	piso (opcional).
+	Puerta (opcional).
+	Numero, código postal,  población y país (obligatorios)
+o	Puede tener de cero a múltiples elementos teléfono con atributo tipo (posibles valores de tipo: “fijo”, “móvil”, “casa”, “trabajo”,...)
+o	Un elemento de nombre “es_familiar” que puede existir de 0 a 1 vez y que ha de estar vacío.
+
+-->
+<!DOCTYPE contactos SYSTEM "ex04.dtd">
+<contactos>
+    <contacto>
+        <nombre>Paco</nombre>
+        <apellidos>
+            <apellido>Fernandez</apellido>
+            <apellido>Suela</apellido>
+        </apellidos>
+        <edad>23</edad>
+        <direccion>
+            <tipo_via tipo="plaza">Cataluña</tipo_via>
+            <piso>2</piso>
+            <puerta>12</puerta>
+            <numero>4</numero>
+            <cp>08001</cp>
+            <poblacion>catalunya</poblacion>
+            <pais>catalunya</pais>
+        </direccion>
+        <telefonos>
+            <telefono tipo="fijo">45676543</telefono>
+            <telefono tipo="casa">23455433</telefono>
+        </telefonos>
+        <esFamiliar />
+    </contacto>
+</contactos>

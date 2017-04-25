@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT pelicula (titulo, direccion, anyo, plot, genero)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT direccion (director+)>
+<!ELEMENT director (#PCDATA)>
+<!ELEMENT anyo (#PCDATA)>
+<!ELEMENT plot (protagonista+|tematica+)>
+<!ELEMENT protagonista (#PCDATA)>
+<!ELEMENT tematica (#PCDATA)>
+<!ELEMENT genero EMPTY>
+<!ATTLIST genero tipo (drama|comedia|documental|terror) #REQUIRED>
