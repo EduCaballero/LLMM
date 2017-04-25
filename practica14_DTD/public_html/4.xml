@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+4.	Crea un documento XML que contenga información sobre una película. 
+        Crea el DTD asociado que valide que el XML contiene los siguientes elementos:
+        
+o	Título(obligatorio y no se puede repetir)
+o	Director (obligatorio y pueden haber uno o más)
+o	Año (obligatorio y solo puede haber uno)
+o	Elemento protagonista o bien temática
+               Protagonista ( pueden haber uno o más protagonistas) 
+               Temática ( pueden haber uno o más protagonistas)
+o	Género ha de ser un tag vacío.
+        	Ha de contener un atributo tipo (obligatorio y solo puede ser: “drama”, “comedia”, “documental”, “terror”, “thriller” o ”humor”)
+
+-->
+
+
+<pelicula>
+    <titulo>Star Wars</titulo>
+    <director>George Lucas</director>
+    <anyo>2017</anyo>
+    <protagonistas>
+        <protagonista 
+    </protagonistas>
+</pelicula>
