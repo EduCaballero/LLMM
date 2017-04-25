@@ -25,10 +25,20 @@ o	Un elemento de nombre “es_familiar” que puede existir de 0 a 1 vez y que h
 <!-- TODO define your own vocabulary/syntax. Example follows:  -->
 <!ELEMENT contactos (contacto)>
 <!ELEMENT contacto (nombre, apellidos, edad, direccion, telefonos, esFamiliar*)>
+<!ELEMENT nombre (#PCDATA)>
 <!ELEMENT apellidos (apellido+)>
+<!ELEMENT apellido (#PCDATA)>
 <!ELEMENT edad (#PCDATA)>
-<!ELEMENT direccion (tipo_via, piso*, puerta*, cp, poblacion, pais)>
+<!ELEMENT direccion (tipo_via, piso*, puerta*, numero, cp, poblacion, pais)>
+<!ELEMENT tipo_via (#PCDATA)>
 <!ATTLIST tipo_via tipo (calle|plaza|carretera) #REQUIRED>
+<!ELEMENT piso (#PCDATA)>
+<!ELEMENT puerta (#PCDATA)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT cp (#PCDATA)>
+<!ELEMENT poblacion (#PCDATA)>
+<!ELEMENT pais (#PCDATA)>
 <!ELEMENT telefonos (telefono*)>
+<!ELEMENT telefono (#PCDATA)>
 <!ATTLIST telefono tipo (fijo|casa|movil|trabajo) #REQUIRED>
 <!ELEMENT esFamiliar EMPTY>
