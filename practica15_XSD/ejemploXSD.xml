@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<sms lenght="19" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
- xsi:noNamespaceSchemaLocation="ejemplo.xsd">
-
-
-<sms>
-     <from amigo="si">0034657849302</from>
+<sms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+ xsi:noNamespaceSchemaLocation="ejemploXSD.xsd">
+     <from amigo="si">
+         <nombre>Pepe</nombre>
+     </from>
      <to>
          <nombre>Juan</nombre>
          <nombre>Maria</nombre>
      </to>
      <texto>Terminasteis los ejercicios de DTD?</texto>
-     <fecha hora="18:0">29:03:2015</fecha>
+     <fecha hora="18:00:00">29:03:2015</fecha>
 </sms> 
+
