@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!--<!DOCTYPE equipos SYSTEM "sintesis.dtd">-->
+<equipos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="sintesis.xsd">
+    <equipo>
+        <nombreEq></nombreEq>
+        <trabajo tipo="desarrollo"/>
+        <exitos>
+            <anyos>
+                <anyo num="1999">
+                    <resultado igual="exito"/>
+                    <resultado igual="fracaso"/>
+                    <resultado igual="exito"/>
+                    <resultado igual="exito"/>
+                </anyo>
+                <anyo num="2000">
+                    <resultado igual="fracaso"/>
+                    <resultado igual="fracaso"/>
+                    <resultado igual="exito"/>
+                    <resultado igual="exito"/>
+                </anyo>
+            </anyos>
+        </exitos>
+        <integrantes>
+            <integrante>
+                <nombre>pepe</nombre>
+                <apellido>perez</apellido>
+                <cargo>ejecutivo</cargo>
+                <fechaNac>1986-10-21</fechaNac>
+                <rutaImg extension="jpg">c:/olakase</rutaImg>
+                <ultHoraPart>18:00:00</ultHoraPart>
+                <ultFechaEmp>2017-06-03</ultFechaEmp>
+                <estadisticas>
+                    <goles marcados="100"/>
+                    <minions eliminados="50"/>
+                </estadisticas>
+            </integrante>
+        </integrantes>
+    </equipo>
+</equipos>

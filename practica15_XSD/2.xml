@@ -5,7 +5,8 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 
-
-<root>
-    
-</root>
+<coche xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="2.xsd">
+    <matricula>1292CGN</matricula>
+    <color>rojo</color>
+    <model year="2004">Fiat Stylo</model>
+</coche>

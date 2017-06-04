@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    
+    <xs:element name="coches">
+        <xs:complexType mixed="false">
+            <xs:sequence>
+                <xs:element name="coche" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType mixed="false">
+                        <xs:sequence>
+                            <xs:element name="matricula" type="xs:string"/>
+                            <xs:element name="color">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="rojo"/>
+                                        <xs:enumeration value="amarillo"/>
+                                        <xs:enumeration value="verde"/>
+                                        <xs:enumeration value="blanco"/>
+                                        <xs:enumeration value="negro"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="modelo">
+                                <xs:complexType  mixed="true">
+                                    <xs:attribute name="year"  use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="tipo" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

@@ -68,7 +68,7 @@
         <script>
             $(document).ready(function () {
                 $('#map').gmap3({
-                    zoom: 6
+                    zoom: 1
                 })
                         .infowindow({})
                 .marker([

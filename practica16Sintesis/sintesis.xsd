@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="equipos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="equipo">
+                    <xs:complexType mixed="true">
+                        <xs:sequence>
+                            <xs:element name="nombreEq" type="xs:string"/>
+                            <xs:element name="trabajo">
+                                <xs:complexType>
+                                    <xs:attribute name="tipo" use="required" type="xs:string"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="exitos">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="anyos">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="anyo" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="resultado" minOccurs="1" maxOccurs="unbounded"> <!--Se entiende que si ponemos un año es que, como mínimo, habrá un éxito o un fracaso. El requerimiento de la práctica se cumple con el de arriba -->
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="igual" use="required">
+                                                                            <xs:simpleType>
+                                                                                <xs:restriction base="xs:string">
+                                                                                    <xs:enumeration value="exito"/>
+                                                                                    <xs:enumeration value="fracaso"/>
+                                                                                </xs:restriction>
+                                                                            </xs:simpleType>
+                                                                        </xs:attribute>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                            <xs:attribute name="num" use="required" type="xs:integer"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="integrantes">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="integrante">
+                                            <xs:complexType mixed="true">
+                                                <xs:sequence>
+                                                    <xs:element name="nombre"> <!-- Preguntar si también hace falta el xs:string o si al estar también en el restriction es redundante-->
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:string">
+                                                                <xs:minLength value="3"/>
+                                                                <xs:maxLength value="20"/>
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+                                                    </xs:element>
+                                                    <xs:element name="apellido">
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:string">
+                                                                <xs:minLength value="3"/>
+                                                                <xs:maxLength value="20"/>
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+                                                    </xs:element>
+                                                    <xs:element name="cargo">
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:string">
+                                                                <xs:minLength value="3"/>
+                                                                <xs:maxLength value="20"/>
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+                                                    </xs:element>
+                                                    <xs:element name="fechaNac">
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:date">
+                                                                <xs:maxInclusive value="2000-01-01"/>
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+                                                    </xs:element>
+                                                    <xs:element name="rutaImg">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension base="xs:anyURI">
+                                                                    <xs:attribute type="xs:string" name="extension"/>
+                                                                </xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element type="xs:time" name="ultHoraPart"/>
+                                                    <xs:element type="xs:date" name="ultFechaEmp"/>
+                                                    <xs:element name="estadisticas">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="goles" minOccurs="0" maxOccurs="1">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="marcados" use="required" type="xs:integer"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="programas" minOccurs="0" maxOccurs="1">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="realizados" use="required" type="xs:integer"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="minions" minOccurs="0" maxOccurs="1">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="eliminados" use="required" type="xs:integer"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
