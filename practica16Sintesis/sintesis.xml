@@ -5,7 +5,7 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 
-<!--<!DOCTYPE equipos SYSTEM "sintesis.dtd">-->
+<!DOCTYPE equipos SYSTEM "sintesis.dtd">
 <equipos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="sintesis.xsd">
     <equipo>
         <nombreEq></nombreEq>

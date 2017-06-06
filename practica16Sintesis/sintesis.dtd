@@ -13,6 +13,9 @@ and open the template in the editor.
 
 <!-- TODO define your own vocabulary/syntax. Example follows:  -->
 <!ELEMENT equipos (equipo)>
+<!ATTLIST equipos xmlns:xsi CDATA #REQUIRED>
+<!ATTLIST equipos xsi:noNamespaceSchemaLocation CDATA #REQUIRED>
+
 <!ELEMENT equipo (nombreEq, trabajo, exitos, integrantes)>
 <!ELEMENT nombreEq (#PCDATA)>
 
