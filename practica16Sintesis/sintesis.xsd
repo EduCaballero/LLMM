@@ -9,10 +9,40 @@ and open the template in the editor.
     <xs:element name="equipos">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="equipo">
+                <xs:element name="equipo" minOccurs="1" maxOccurs="unbounded">
                     <xs:complexType mixed="true">
                         <xs:sequence>
+                            <xs:element name="patrocodinadores">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="patrocinador" minOccurs="2" maxOccurs="unbounded"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="fecha" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:date">
+                                                <xs:minInclusive value="2000-01-01"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="eventosParticipado" type="xs:string"/>
                             <xs:element name="nombreEq" type="xs:string"/>
+                            <xs:element name="competiciones">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="competicion" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="ligaCatalana"/>
+                                                    <xs:enumeration value="ligaEsp"/>
+                                                    <xs:enumeration value="ligaEuropea"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
                             <xs:element name="trabajo">
                                 <xs:complexType>
                                     <xs:attribute name="tipo" use="required" type="xs:string"/>
@@ -52,13 +82,13 @@ and open the template in the editor.
                             <xs:element name="integrantes">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="integrante" minOccurs="1" maxOccurs="unbounded">
+                                        <xs:element name="integrante" minOccurs="1" maxOccurs="unbounded"> <!-- aquí va el atribute!!!-->
                                             <xs:complexType mixed="true">
                                                 <xs:sequence>
                                                     <xs:element name="nombre"> <!-- Preguntar si también hace falta el xs:string o si al estar también en el restriction es redundante-->
                                                         <xs:simpleType>
                                                             <xs:restriction base="xs:string">
-                                                                <xs:minLength value="3"/>
+                                                                <xs:minLength value="2"/>
                                                                 <xs:maxLength value="20"/>
                                                             </xs:restriction>
                                                         </xs:simpleType>
@@ -115,10 +145,26 @@ and open the template in the editor.
                                                                         <xs:attribute name="eliminados" use="required" type="xs:integer"/>
                                                                     </xs:complexType>
                                                                 </xs:element>
+                                                                <xs:element name="golpes">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="dados" type="xs:integer"/>
+                                                                        <xs:attribute name="recibidos" type="xs:integer"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
                                                             </xs:sequence>
                                                         </xs:complexType>
                                                     </xs:element>
                                                 </xs:sequence>
+                                                <xs:attribute name="nacionalidad" use="required">
+                                                    <xs:simpleType>
+                                                        <xs:restriction base="xs:string">
+                                                            <xs:enumeration value="francesa"/>
+                                                            <xs:enumeration value="eterniana"/>
+                                                            <xs:enumeration value="italiana"/>
+                                                            <xs:enumeration value="marciana"/>
+                                                        </xs:restriction>
+                                                    </xs:simpleType>
+                                                </xs:attribute>
                                             </xs:complexType>
                                         </xs:element>
                                     </xs:sequence>

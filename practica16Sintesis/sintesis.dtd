@@ -12,12 +12,22 @@ and open the template in the editor.
 -->
 
 <!-- TODO define your own vocabulary/syntax. Example follows:  -->
-<!ELEMENT equipos (equipo)>
+<!ELEMENT equipos (equipo+)>
 <!ATTLIST equipos xmlns:xsi CDATA #REQUIRED>
 <!ATTLIST equipos xsi:noNamespaceSchemaLocation CDATA #REQUIRED>
 
-<!ELEMENT equipo (nombreEq, trabajo, exitos, integrantes)>
+<!ELEMENT equipo (patrocodinadores?, eventosParticipado?, nombreEq, competiciones, trabajo, exitos, integrantes)>
+<!ELEMENT patrocodinadores (patrocinador+)>
+<!ATTLIST patrocodinadores fecha CDATA #REQUIRED>
+<!ELEMENT patrocinador (#PCDATA)>
+
+<!ELEMENT eventosParticipado (#PCDATA)>
+
 <!ELEMENT nombreEq (#PCDATA)>
+
+<!ELEMENT competiciones (competicion*)>
+<!ELEMENT competicion (#PCDATA)>
+
 
 <!ELEMENT trabajo EMPTY>
 <!ATTLIST trabajo tipo CDATA #REQUIRED>
@@ -32,6 +42,7 @@ and open the template in the editor.
 
 <!ELEMENT integrantes (integrante+)>
 <!ELEMENT integrante (nombre, apellido, cargo+, fechaNac, rutaImg*, ultHoraPart, ultFechaEmp, estadisticas?)>
+<!ATTLIST integrante nacionalidad (francesa | italiana | eterniana | marciana) #REQUIRED>
 
 <!ELEMENT nombre (#PCDATA)>
 <!ELEMENT apellido (#PCDATA)>
@@ -41,10 +52,17 @@ and open the template in the editor.
 <!ATTLIST rutaImg extension (jpg | png | gif) #REQUIRED>
 <!ELEMENT ultHoraPart (#PCDATA)>
 <!ELEMENT ultFechaEmp (#PCDATA)>
-<!ELEMENT estadisticas (goles*, programas*, minions*)>
+<!ELEMENT estadisticas (goles*, programas*, minions*, golpes*)>
 <!ELEMENT goles EMPTY>
 <!ATTLIST goles marcados CDATA #REQUIRED>
 <!ELEMENT programas EMPTY>
 <!ATTLIST programas realizados CDATA #REQUIRED>
 <!ELEMENT minions EMPTY>
 <!ATTLIST minions eliminados CDATA #REQUIRED>
+<!ELEMENT golpes EMPTY>
+<!ATTLIST golpes dados CDATA #IMPLIED recibidos CDATA #IMPLIED>
+
+
+
+
+
