@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE equipos SYSTEM "sintesis.dtd">
+<equipos>
+    <equipo>
+        <nombre>Cloud9</nombre>
+        <tipo>e-Sports</tipo>
+        <historial>
+            <ano n="2015">
+                <exitos>
+                    <exito>Victoria en el kamutillo</exito>
+                    <exito>Victoria de Mang0 en ese ApeX</exito>
+                </exitos>
+                <fracasos>
+                    <fracaso>Derrota en el jolineee</fracaso>
+                    <fracaso>Cardarle al tiruliru</fracaso>
+                </fracasos>
+            </ano>
+            <ano n="2016">
+                <exitos>
+                    <exito>Mmmm</exito>
+                    <exito>Aporelbotna</exito>
+                </exitos>
+                <fracasos>
+                    <fracaso>Dewaaa</fracaso>
+                    <fracaso>Joline xavalada</fracaso>
+                </fracasos>
+            </ano>
+        </historial>
+        <integrantes>
+            <integrante>
+                <nombre>Pepe</nombre>
+                <apellido>Viyuela</apellido>
+                <cargo>Top Player</cargo>
+                <fechanac>25-07-1996</fechanac>
+                <rutaimg tipo="jpg">http://ep01.epimg.net/verne/imagenes/2015/09/28/articulo/1443439253_452315_1443441347_sumario_normal.jpg</rutaimg>
+                <ultimaparticipacion>03:00</ultimaparticipacion>
+                <ultimafecha>22-04-2017</ultimafecha>
+                <estadisticas>
+                    <torneos>
+                        <primero>5</primero>
+                        <segundo>3</segundo>
+                        <tercero>1</tercero>
+                    </torneos>
+                    <mandosrotos>10</mandosrotos>
+                </estadisticas>
+            </integrante>
+        </integrantes>
+    </equipo>
+</equipos>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!--
+    TODO define vocabulary identification data
+    PUBLIC ID  : -//vendor//vocabulary//EN
+    SYSTEM ID  : http://server/path/__NAME__
+-->
+
+<!-- TODO define your own vocabulary/syntax. Example follows:  -->
+<!ELEMENT equipos (equipo)>
+<!ATTLIST equipos xmlns:xsi CDATA #REQUIRED>
+<!ATTLIST equipos xsi:noNamespaceSchemaLocation CDATA #REQUIRED>
+
+<!ELEMENT equipo (nombreEq, trabajo, exitos, integrantes)>
+<!ELEMENT nombreEq (#PCDATA)>
+
+<!ELEMENT trabajo EMPTY>
+<!ATTLIST trabajo tipo CDATA #REQUIRED>
+
+<!ELEMENT exitos (anyos)>
+<!ELEMENT anyos (anyo*)>
+<!ELEMENT anyo (resultado*)>
+<!ATTLIST anyo num CDATA #REQUIRED>
+
+<!ELEMENT resultado EMPTY>
+<!ATTLIST resultado igual (exito | fracaso) #REQUIRED>
+
+<!ELEMENT integrantes (integrante+)>
+<!ELEMENT integrante (nombre, apellido, cargo+, fechaNac, rutaImg*, ultHoraPart, ultFechaEmp, estadisticas?)>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT cargo (#PCDATA)>
+<!ELEMENT fechaNac (#PCDATA)>
+<!ELEMENT rutaImg (#PCDATA)>
+<!ATTLIST rutaImg extension (jpg | png | gif) #REQUIRED>
+<!ELEMENT ultHoraPart (#PCDATA)>
+<!ELEMENT ultFechaEmp (#PCDATA)>
+<!ELEMENT estadisticas (goles*, programas*, minions*)>
+<!ELEMENT goles EMPTY>
+<!ATTLIST goles marcados CDATA #REQUIRED>
+<!ELEMENT programas EMPTY>
+<!ATTLIST programas realizados CDATA #REQUIRED>
+<!ELEMENT minions EMPTY>
+<!ATTLIST minions eliminados CDATA #REQUIRED>

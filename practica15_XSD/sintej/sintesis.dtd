@@ -1,0 +1,27 @@
+<!ELEMENT equipos (equipo+)>
+<!ELEMENT equipo (nombre, tipo, historial*, integrantes)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT tipo (#PCDATA)>
+<!ELEMENT historial (ano+)>
+<!ELEMENT ano (exitos?, fracasos?)>
+<!ATTLIST ano n #REQUIRED>
+<!ELEMENT exitos (exito*)>
+<!ELEMENT fracasos (fracaso*)>
+<!ELEMENT exito (#PCDATA)>
+<!ELEMENT fracaso (#PCDATA)>
+<!ELEMENT integrantes (integrante+)>
+<!ELEMENT integrante (nombre, apellido, cargo+, fechanac, rutaimg*, ultimaparticipacion, ultimafecha, estadisticas?)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT cargo (#PCDATA)>
+<!ELEMENT fechanac (#PCDATA)>
+<!ELEMENT rutaimg (#PCDATA)>
+<!ATTLIST rutaimg tipo (jpg | png | gif)>
+<!ELEMENT ultimaparticipacion (#PCDATA)>
+<!ELEMENT ultimafecha (#PCDATA)>
+<!ELEMENT estadisticas (torneos, mandosrotos)>
+<!ELEMENT torneos (primero, segundo, tercero)>
+<!ELEMENT primero (#PCDATA)>
+<!ELEMENT segundo (#PCDATA)>
+<!ELEMENT tercero (#PCDATA)>
+<!ELEMENT mandosrotos (#PCDATA)>
